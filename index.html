@@ -1,46 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Key Verification</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $("#checkButton").click(function() {
-        var key = $("#keyInput").val();
-        var answer = getAnswer(key);
-        $("#answerOutput").val(answer);
-      });
-
-      function getAnswer(key) {
-        var answers = {
-          "67W9epxl5GLF0DeewJh1jAVYTuq8HFzZSUfaEmLoRMc=": 1709,
-          "GpYckZujTVa04KIlnsVw95-nCZ-cFu0hHxtwbIUDIjk=": 2479.28571428571,
-          "5JoMbPoLnGVaeYEsgTkNPaUvJT6Vn0TkzPNq5cR0-7I=": 2458.91666666667,
-          "Cg0rDQWSdVK-YaUlFuhfA0iteERF3WyE3QT5yrnbAz0=": 3309,
-          "0NPDzBV0KY0O0Yfocq5NDv9Wjx-wzZil4xf7POhaAck=": 12732,
-          "DkXWqB9WXgA321KflkuuEdbKstDyYaqsV8AtN1TYgos=": 5324.67,
-          "uoRts1i7_qV1_IIZYtl6r3DeEyetgTj1M1aPhuSpal4=": 115,
-          "g5sPfc-lSaZtruPSrKKX2Dtlh2rtzv4Cm3mokqkESBU=": 25945.0959130435,
-          "f549L8QCz-YGa9OfqeJ8FKEt9-lfZ7LvzT8U4vJwiuQ=": 26254.2390909091,
-          "NnLexqcSo7QJcPETR25vwFwyS3iEQLQe2WU-LMDrnbI=": 31548.42
-        };
-
-        if (key in answers) {
-          return answers[key];
-        } else {
-          return "Invalid key!";
-        }
-      }
-    });
-  </script>
+  <title>Interactive Quiz</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <h1>Key Verification</h1>
-  <label for="keyInput">Enter Key:</label>
-  <input type="text" id="keyInput">
-  <button id="checkButton">Check</button>
-  <br>
-  <label for="answerOutput">Answer:</label>
-  <input type="text" id="answerOutput" readonly>
+  <h1>Interactive Quiz</h1>
+  <div id="quiz-container">
+    <h2 id="question"></h2>
+    <div id="options">
+      <button class="option"></button>
+      <button class="option"></button>
+      <button class="option"></button>
+      <button class="option"></button>
+    </div>
+    <button id="submit-btn">Submit</button>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
