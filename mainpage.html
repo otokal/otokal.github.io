@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Key Verification</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $("#checkButton").click(function() {
+        var key = $("#keyInput").val();
+        var answer = getAnswer(key);
+        $("#answerOutput").val(answer);
+      });
+
+      function getAnswer(key) {
+        var answers = {
+          "67W9epxl5GLF0DeewJh1jAVYTuq8HFzZSUfaEmLoRMc=": 1709
+        };
+
+        if (key in answers) {
+          return answers[key];
+        } else {
+          return "Invalid key!";
+        }
+      }
+    });
+  </script>
+</head>
+<body>
+  <h1>Key Verification</h1>
+  <label for="keyInput">Enter Key:</label>
+  <input type="text" id="keyInput">
+  <button id="checkButton">Check</button>
+  <br>
+  <label for="answerOutput">Answer:</label>
+  <input type="text" id="answerOutput" readonly>
+</body>
+</html>
