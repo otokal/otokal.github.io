@@ -1,22 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Interactive Quiz</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>My Profile</title>
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin: 20px auto;
+      display: block;
+    }
+
+    .profile-info {
+      text-align: center;
+    }
+
+    .contact-info {
+      margin-top: 20px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <h1>Interactive Quiz</h1>
-  <div id="quiz-container">
-    <h2 id="question"></h2>
-    <div id="options">
-      <button class="option"></button>
-      <button class="option"></button>
-      <button class="option"></button>
-      <button class="option"></button>
+  <div class="container">
+    <h1>My Profile</h1>
+    <img src="profile-picture.jpg" alt="Profile Picture" class="profile-img">
+    <div class="profile-info">
+      <h2>John Doe</h2>
+      <p>Web Developer</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, tellus vitae lobortis ullamcorper, nisi erat molestie odio, eget tristique lectus orci et nunc. Sed vitae odio id risus fermentum consectetur in in leo.</p>
+      <p>Nulla facilisi. Aenean in semper odio, id egestas mauris. Quisque auctor, mi vitae bibendum dignissim, elit nibh cursus ex, sit amet tincidunt neque urna eu ex. In hac habitasse platea dictumst.</p>
     </div>
-    <button id="submit-btn">Submit</button>
+    <div class="contact-info">
+      <h3>Contact Information</h3>
+      <p>Email: john.doe@example.com</p>
+      <p>Phone: +1 123-456-7890</p>
+      <p>Website: www.example.com</p>
+    </div>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    // JavaScript code
+    console.log("Hello, JavaScript!");
+  </script>
 </body>
 </html>
