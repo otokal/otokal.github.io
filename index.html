@@ -37,6 +37,19 @@
       margin-top: 20px;
       text-align: center;
     }
+    
+    .play-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+    
+    .play-button button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
@@ -55,11 +68,20 @@
       <p>Phone: +1 123-456-7890</p>
       <p>Website: www.example.com</p>
     </div>
+    
+    <div class="play-button">
+      <button onclick="playAudio()">Play</button>
+    </div>
   </div>
 
   <script>
     // JavaScript code
     console.log("Hello, JavaScript!");
+    
+    function playAudio() {
+      var audio = new Audio('lift.mp3');
+      audio.play();
+    }
   </script>
 </body>
 </html>
